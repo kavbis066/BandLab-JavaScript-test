@@ -4,7 +4,6 @@ $(document).ready(function() {
     $.ajax({
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/posts',
-        async:true,
         success: function(response) {
             // console.log(response);
             posts = response;
