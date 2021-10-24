@@ -1,0 +1,30 @@
+.container {
+    margin: 2em;
+    text-align: center;
+    font-family: 'Segoe UI';
+}
+th, td{
+    font-size: 15px 'Segoe UI';
+}
+table, th, td {
+    border: solid 1px #ddd;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 2px 3px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: rgba(68, 185, 146, 0.4);
+}
+th {
+    font-weight:bold;
+    background-color:rgb(68, 185, 146);
+}
+
+a {
+    text-decoration: none;
+    float: right;
+    background-color: rgb(68, 185, 146);
+    color: #fff;
+    padding: 1em;
+}
