@@ -5,31 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JSONPlaceholder API posts</title>
+    <link rel="stylesheet" href="style.css">
 
-    <script src="app.js" defer></script>
-    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
-    <style>
-        th, td, p {
-            font:15px 'Segoe UI';
-        }
-        table, th, td {
-            border: solid 1px #ddd;
-            border-collapse: collapse;
-            padding: 2px 3px;
-            text-align: center;
-        }
-        th {
-            font-weight:bold;
-        }
-    </style>
+    <script src="jsonapi.js" defer></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>JSONPlaceholder posts</h1>
-    <div id="app"></div>
-    <table class="table">
-        <thead></thead>
-        <tbody></tbody>
-    </table>
+    
+    <div class="container">
+        <a href="webaudio.html">Web Audio API Task</a>
+        <h1>JSONPlaceholder posts</h1>
+
+        <table>
+            <tr>
+                <th id="userid">User ID +</th>
+                <th>ID</th>
+                <th data-column="title" data-order="desc" id="title">Title &#9650</th>
+                <th>Body</th>
+            </tr>
+
+            <tbody id="myTable"></tbody>
+        </table>
+    </div>
 </body>
 </html>
