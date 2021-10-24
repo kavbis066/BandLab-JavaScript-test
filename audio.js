@@ -31,18 +31,27 @@ function playTrack(url) {
 }
 
 // getting all audiobuffers
-const tracks = document.querySelectorAll('audio');
-// console.log(tracks);
-const addTrack = e => {
-    e.preventDefault();
-}
+// const tracks = document.querySelectorAll('audio');
+// // console.log(tracks);
+// const addTrack = e => {
+//     e.preventDefault();
+// }
 
-tracks.forEach(track => {
-    // console.log(track.src);
-    playTrack(track.src); 
-    addTrack;
-    getBuffer(track.src);
-});
+// tracks.forEach(track => {
+//     // console.log(track.src);
+//     playTrack(track.src); 
+//     addTrack;
+//     getBuffer(track.src);
+// });
+
+let tracks = document.getElementsByClassName('track');
+for (let i = 0; i < tracks.length; i++) {
+    tracks[i].addEventListener('click', function(e) {
+        playTrack(this.href);
+        e.preventDefault();
+    });
+    getBuffer(tracks[i].href);
+}
 
 
 
