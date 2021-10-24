@@ -1,14 +1,13 @@
 $(document).ready(function() {
     let posts = [];
     let table = document.getElementById('myTable');
-
     $.ajax({
         method: 'GET',
         url: 'https://jsonplaceholder.typicode.com/posts',
+        async:true,
         success: function(response) {
             // console.log(response);
-            posts = response
-            // console.log(posts);
+            posts = response;
             buildTable(posts)
         }
     });
